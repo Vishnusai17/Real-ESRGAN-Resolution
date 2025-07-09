@@ -18,3 +18,10 @@ for filename in uploaded.keys():
   print(f'move {filename} to {dst_path}')
   shutil.move(filename, dst_path)
 #Upload widget is only available when the cell has been executed in the current browser session
+
+# Download the files
+zip_filename = 'Real-ESRGAN_result.zip'
+if os.path.exists(zip_filename):
+  os.remove(zip_filename)
+os.system(f"zip -r -j {zip_filename} results/*")
+files.download(zip_filename)
