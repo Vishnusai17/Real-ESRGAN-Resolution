@@ -1,0 +1,8 @@
+!pip install basicsr
+!pip install facexlib
+!pip install gfpgan
+!pip install -r requirements.txt
+!python setup.py develop
+
+!git clone https://github.com/xinntao/Real-ESRGAN.git
+%cd Real-ESRGAN
